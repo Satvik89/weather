@@ -36,6 +36,17 @@ function search(input) {
         })
         .catch(error => {
             console.log("Error:", error);
+            document.querySelector("#location").innerText = "";
+            document.querySelector("#description").innerText = "";
+            document.querySelector("#temp").innerHTML = "";
+            document.querySelector("#wind").innerHTML = "";
+            document.querySelector("#humidity").innerHTML = "";
+            document.querySelector("#pressure").innerHTML = "";
+            document.getElementById('img').src = "";
+            document.body.style.backgroundImage = "";
+
+            document.querySelector("#error").innerHTML = "Location not found";
+
         });
     city.value = "";
 }
@@ -43,6 +54,8 @@ const answers = document.querySelector("#answers");
 
 
 button.addEventListener("click", function() {
+    document.querySelector("#error").innerHTML = "";
+
     console.log("button clicked");
     let input = city.value;
 
@@ -52,6 +65,8 @@ button.addEventListener("click", function() {
 })
 city.addEventListener("keyup", function(event) {
     if (event.key === "Enter") {
+        document.querySelector("#error").innerHTML = "";
+
         input = city.value;
         console.log("button clicked");
         search(input);
