@@ -18,21 +18,21 @@
     /* border-width: 1.5em; */
     border-radius: 10em;
     width: 10em;
-    font-size: x-large;
+    font-size: large;
     font-weight: bold;
     padding: 0.38em;
 }
 
 #search {
-    width: 4.8em;
-    height: 2.25em;
+    width: 4em;
+    height: 2em;
     border-radius: 3em;
     font-size: large;
     font-weight: bold;
 }
 
 body {
-    font-size: large;
+    font-size: small;
     font-family: 'Courier New', Courier, monospace;
     font-weight: bold;
     background-image: url('https://source.unsplash.com/1600x900/?landscape');
@@ -57,6 +57,7 @@ body {
 
 #answers {
     display: none;
+    font-size:x-small;
 }
 
 @media screen and (max-width:768px) {
